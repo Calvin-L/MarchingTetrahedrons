@@ -1,0 +1,17 @@
+
+Marching Tetrahedrons Implementation
+
+--------------------------------------------
+
+This is an implementation of the "marching tetrahedrons"
+algorithm for OpenGL. The project was written on Mac OS X,
+but should be easily portable to other operating systems.
+
+The implementation is not ultra-performance intensive, but
+was instead written as an easy-to-understand demo.
+
+Important files:
+    main.cpp           program entry point
+	Isosurface.h       parent class for renderable surfaces
+    Decimate.h         declaration of the actual algorithm
+    Decimate.cpp       implementation of the actual algorithm

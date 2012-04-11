@@ -1,5 +1,5 @@
 //
-//  Decimator.cpp
+//  Decimate.cpp
 //  MarchingCubes
 //
 //  Created by Calvin Loncaric on 6/26/11.
