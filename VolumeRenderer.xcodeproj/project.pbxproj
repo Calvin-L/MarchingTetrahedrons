@@ -1,0 +1,260 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		3E02282213B822CC00510178 /* math3D.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E02282013B822CC00510178 /* math3D.cpp */; };
+		3E02282613B8256900510178 /* Gyroid.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E02282413B8256900510178 /* Gyroid.cpp */; };
+		3E1D6D3413B6A829006CE5DC /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E1D6D3313B6A829006CE5DC /* main.cpp */; };
+		3E1D6D3D13B6A946006CE5DC /* GLUT.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E1D6D3C13B6A946006CE5DC /* GLUT.framework */; };
+		3E1D6D3F13B6A94C006CE5DC /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E1D6D3E13B6A94C006CE5DC /* OpenGL.framework */; };
+		3E350ED113B7C042001E6746 /* Decimate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E350ECF13B7C042001E6746 /* Decimate.cpp */; };
+		3E350ED513B7C199001E6746 /* Sphere.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E350ED313B7C199001E6746 /* Sphere.cpp */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		3E01EFA615362660008352E7 /* common.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = common.h; sourceTree = SOURCE_ROOT; };
+		3E02282013B822CC00510178 /* math3D.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = math3D.cpp; sourceTree = SOURCE_ROOT; };
+		3E02282113B822CC00510178 /* math3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = math3D.h; sourceTree = SOURCE_ROOT; };
+		3E02282413B8256900510178 /* Gyroid.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Gyroid.cpp; sourceTree = SOURCE_ROOT; };
+		3E02282513B8256900510178 /* Gyroid.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Gyroid.h; sourceTree = SOURCE_ROOT; };
+		3E1D6D2F13B6A829006CE5DC /* VolumeRenderer */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = VolumeRenderer; sourceTree = BUILT_PRODUCTS_DIR; };
+		3E1D6D3313B6A829006CE5DC /* main.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = main.cpp; sourceTree = SOURCE_ROOT; };
+		3E1D6D3C13B6A946006CE5DC /* GLUT.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = GLUT.framework; path = System/Library/Frameworks/GLUT.framework; sourceTree = SDKROOT; };
+		3E1D6D3E13B6A94C006CE5DC /* OpenGL.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = OpenGL.framework; path = System/Library/Frameworks/OpenGL.framework; sourceTree = SDKROOT; };
+		3E350EC913B7AB07001E6746 /* Isosurface.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Isosurface.h; sourceTree = SOURCE_ROOT; };
+		3E350ECC13B7BA00001E6746 /* Array3D.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Array3D.h; sourceTree = SOURCE_ROOT; };
+		3E350ECF13B7C042001E6746 /* Decimate.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Decimate.cpp; sourceTree = SOURCE_ROOT; };
+		3E350ED013B7C042001E6746 /* Decimate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Decimate.h; sourceTree = SOURCE_ROOT; };
+		3E350ED313B7C199001E6746 /* Sphere.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sphere.cpp; sourceTree = SOURCE_ROOT; };
+		3E350ED413B7C199001E6746 /* Sphere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sphere.h; sourceTree = SOURCE_ROOT; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		3E1D6D2C13B6A829006CE5DC /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E1D6D3F13B6A94C006CE5DC /* OpenGL.framework in Frameworks */,
+				3E1D6D3D13B6A946006CE5DC /* GLUT.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		3E1D6D2413B6A828006CE5DC = {
+			isa = PBXGroup;
+			children = (
+				3E1D6D3213B6A829006CE5DC /* Source */,
+				3E1D6D3B13B6A88E006CE5DC /* Frameworks */,
+				3E1D6D3013B6A829006CE5DC /* Products */,
+			);
+			indentWidth = 4;
+			sourceTree = "<group>";
+		};
+		3E1D6D3013B6A829006CE5DC /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				3E1D6D2F13B6A829006CE5DC /* VolumeRenderer */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		3E1D6D3213B6A829006CE5DC /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				3E1D6D3313B6A829006CE5DC /* main.cpp */,
+				3E350EC713B7AAC3001E6746 /* Main Algorithm */,
+				3E350ED213B7C17A001E6746 /* Surfaces */,
+				3E350ECE13B7BA05001E6746 /* Util */,
+			);
+			name = Source;
+			path = MarchingCubes;
+			sourceTree = "<group>";
+		};
+		3E1D6D3B13B6A88E006CE5DC /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				3E1D6D3E13B6A94C006CE5DC /* OpenGL.framework */,
+				3E1D6D3C13B6A946006CE5DC /* GLUT.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3E350EC713B7AAC3001E6746 /* Main Algorithm */ = {
+			isa = PBXGroup;
+			children = (
+				3E350EC913B7AB07001E6746 /* Isosurface.h */,
+				3E350ED013B7C042001E6746 /* Decimate.h */,
+				3E350ECF13B7C042001E6746 /* Decimate.cpp */,
+			);
+			name = "Main Algorithm";
+			path = ..;
+			sourceTree = "<group>";
+		};
+		3E350ECE13B7BA05001E6746 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				3E01EFA615362660008352E7 /* common.h */,
+				3E350ECC13B7BA00001E6746 /* Array3D.h */,
+				3E02282113B822CC00510178 /* math3D.h */,
+				3E02282013B822CC00510178 /* math3D.cpp */,
+			);
+			name = Util;
+			sourceTree = "<group>";
+		};
+		3E350ED213B7C17A001E6746 /* Surfaces */ = {
+			isa = PBXGroup;
+			children = (
+				3E350ED413B7C199001E6746 /* Sphere.h */,
+				3E350ED313B7C199001E6746 /* Sphere.cpp */,
+				3E02282513B8256900510178 /* Gyroid.h */,
+				3E02282413B8256900510178 /* Gyroid.cpp */,
+			);
+			name = Surfaces;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		3E1D6D2E13B6A829006CE5DC /* VolumeRenderer */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3E1D6D3813B6A829006CE5DC /* Build configuration list for PBXNativeTarget "VolumeRenderer" */;
+			buildPhases = (
+				3E1D6D2B13B6A829006CE5DC /* Sources */,
+				3E1D6D2C13B6A829006CE5DC /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = VolumeRenderer;
+			productName = MarchingCubes;
+			productReference = 3E1D6D2F13B6A829006CE5DC /* VolumeRenderer */;
+			productType = "com.apple.product-type.tool";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		3E1D6D2613B6A828006CE5DC /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0430;
+			};
+			buildConfigurationList = 3E1D6D2913B6A828006CE5DC /* Build configuration list for PBXProject "VolumeRenderer" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 3E1D6D2413B6A828006CE5DC;
+			productRefGroup = 3E1D6D3013B6A829006CE5DC /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				3E1D6D2E13B6A829006CE5DC /* VolumeRenderer */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		3E1D6D2B13B6A829006CE5DC /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3E1D6D3413B6A829006CE5DC /* main.cpp in Sources */,
+				3E350ED113B7C042001E6746 /* Decimate.cpp in Sources */,
+				3E350ED513B7C199001E6746 /* Sphere.cpp in Sources */,
+				3E02282213B822CC00510178 /* math3D.cpp in Sources */,
+				3E02282613B8256900510178 /* Gyroid.cpp in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		3E1D6D3613B6A829006CE5DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = DEBUG;
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = macosx;
+			};
+			name = Debug;
+		};
+		3E1D6D3713B6A829006CE5DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD_32_64_BIT)";
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_VERSION = com.apple.compilers.llvm.clang.1_0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MACOSX_DEPLOYMENT_TARGET = 10.6;
+				SDKROOT = macosx;
+			};
+			name = Release;
+		};
+		3E1D6D3913B6A829006CE5DC /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = NO;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				PRODUCT_NAME = VolumeRenderer;
+			};
+			name = Debug;
+		};
+		3E1D6D3A13B6A829006CE5DC /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				GCC_ENABLE_OBJC_EXCEPTIONS = YES;
+				PRODUCT_NAME = VolumeRenderer;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		3E1D6D2913B6A828006CE5DC /* Build configuration list for PBXProject "VolumeRenderer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E1D6D3613B6A829006CE5DC /* Debug */,
+				3E1D6D3713B6A829006CE5DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		3E1D6D3813B6A829006CE5DC /* Build configuration list for PBXNativeTarget "VolumeRenderer" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3E1D6D3913B6A829006CE5DC /* Debug */,
+				3E1D6D3A13B6A829006CE5DC /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 3E1D6D2613B6A828006CE5DC /* Project object */;
+}
