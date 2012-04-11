@@ -14,6 +14,7 @@
 		3E1D6D3F13B6A94C006CE5DC /* OpenGL.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 3E1D6D3E13B6A94C006CE5DC /* OpenGL.framework */; };
 		3E350ED113B7C042001E6746 /* Decimate.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E350ECF13B7C042001E6746 /* Decimate.cpp */; };
 		3E350ED513B7C199001E6746 /* Sphere.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3E350ED313B7C199001E6746 /* Sphere.cpp */; };
+		3EEF7CC0153641410013B66E /* Isosurface.cpp in Sources */ = {isa = PBXBuildFile; fileRef = 3EEF7CBF153641410013B66E /* Isosurface.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +33,7 @@
 		3E350ED013B7C042001E6746 /* Decimate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Decimate.h; sourceTree = SOURCE_ROOT; };
 		3E350ED313B7C199001E6746 /* Sphere.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Sphere.cpp; sourceTree = SOURCE_ROOT; };
 		3E350ED413B7C199001E6746 /* Sphere.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = Sphere.h; sourceTree = SOURCE_ROOT; };
+		3EEF7CBF153641410013B66E /* Isosurface.cpp */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.cpp; path = Isosurface.cpp; sourceTree = SOURCE_ROOT; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 			isa = PBXGroup;
 			children = (
 				3E350EC913B7AB07001E6746 /* Isosurface.h */,
+				3EEF7CBF153641410013B66E /* Isosurface.cpp */,
 				3E350ED013B7C042001E6746 /* Decimate.h */,
 				3E350ECF13B7C042001E6746 /* Decimate.cpp */,
 			);
@@ -173,6 +176,7 @@
 				3E350ED513B7C199001E6746 /* Sphere.cpp in Sources */,
 				3E02282213B822CC00510178 /* math3D.cpp in Sources */,
 				3E02282613B8256900510178 /* Gyroid.cpp in Sources */,
+				3EEF7CC0153641410013B66E /* Isosurface.cpp in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

@@ -15,6 +15,7 @@ float Gyroid::valueAt(float x, float y, float z) const
 
 vector Gyroid::gradientAt(float x, float y, float z) const
 {
+    return Isosurface::gradientAt(x, y, z);
     float gx = cosf(x) * cosf(z) - sinf(x) * sinf(y);
     float gy = cosf(x) * cosf(y) - sinf(y) * sinf(z);
     float gz = cosf(y) * cosf(z) - sinf(x) * sinf(z);
