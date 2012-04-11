@@ -12,6 +12,6 @@ was instead written as an easy-to-understand demo.
 
 Important files:
     main.cpp           program entry point
-	Isosurface.h       parent class for renderable surfaces
+    Isosurface.h       parent class for renderable surfaces
     Decimate.h         declaration of the actual algorithm
     Decimate.cpp       implementation of the actual algorithm
