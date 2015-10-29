@@ -1,3 +1,5 @@
 .DS_Store
 VolumeRenderer.xcodeproj/project.xcworkspace
 VolumeRenderer.xcodeproj/xcuserdata
+*.o
+MarchingTetrahedrons
