@@ -232,11 +232,11 @@ void decimate(const Isosurface& surface,
     
     Array3D<float> grid(pointRes, pointRes, pointRes);
     
-    for (int i = 0; i <= resolution; ++i) {
+    for (size_t i = 0; i <= resolution; ++i) {
         float x = (float)i/resolution * xrange + xMin;
-        for (int j = 0; j <= resolution; ++j) {
+        for (size_t j = 0; j <= resolution; ++j) {
             float y = (float)j/resolution * yrange + yMin;
-            for (int k = 0; k <= resolution; ++k) {
+            for (size_t k = 0; k <= resolution; ++k) {
                 float z = (float)k/resolution * zrange + zMin;
                 float value = surface.valueAt(x, y, z);
                 grid.set(i, j, k, value);
@@ -246,13 +246,13 @@ void decimate(const Isosurface& surface,
     
     
     glBegin(GL_TRIANGLES);
-    for (int i = 0; i < resolution; ++i) {
+    for (size_t i = 0; i < resolution; ++i) {
         float x1 = (float)i/resolution * xrange + xMin;
         float x2 = (float)(i+1)/resolution * xrange + xMin;
-        for (int j = 0; j < resolution; ++j) {
+        for (size_t j = 0; j < resolution; ++j) {
             float y1 = (float)j/resolution * yrange + yMin;
             float y2 = (float)(j+1)/resolution * yrange + yMin;
-            for (int k = 0; k < resolution; ++k) {
+            for (size_t k = 0; k < resolution; ++k) {
                 float z1 = (float)k/resolution * zrange + zMin;
                 float z2 = (float)(k+1)/resolution * zrange + zMin;
                 

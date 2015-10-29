@@ -34,14 +34,14 @@ GLuint preDecimate(const Isosurface& surface,
 static float rotX;
 static float rotY;
 
-struct { int x, y; } mouse = { -1, -1 };
+static struct { int x, y; } mouse = { -1, -1 };
 
 GLuint list;
 
 void render()
 {
     glClearColor(0, 0.3, 0.6, 1);
-	glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
+    glClear(GL_COLOR_BUFFER_BIT | GL_DEPTH_BUFFER_BIT);
     
     GLfloat mat_specular[] = { 1.0, 1.0, 1.0, 1.0 };
     GLfloat mat_shininess[] = { 50.0 };
@@ -72,24 +72,24 @@ void render()
 void changeSize(int w, int h)
 {
     
-	// Prevent a divide by zero, when window is too short
-	// (you cant make a window of zero width).
-	if(h == 0)
-		h = 1;
-	float ratio = 1.0* w / h;
+    // Prevent a divide by zero, when window is too short
+    // (you cant make a window of zero width).
+    if(h == 0)
+        h = 1;
+    float ratio = 1.0* w / h;
     
-	// Use the Projection Matrix
-	glMatrixMode(GL_PROJECTION);
-	glLoadIdentity();
+    // Use the Projection Matrix
+    glMatrixMode(GL_PROJECTION);
+    glLoadIdentity();
     
-	// Set the viewport to be the entire window
-	glViewport(0, 0, w, h);
+    // Set the viewport to be the entire window
+    glViewport(0, 0, w, h);
     
-	// Set the correct perspective.
-	gluPerspective(45,ratio,1,1000);
+    // Set the correct perspective.
+    gluPerspective(45,ratio,1,1000);
     
-	// Get Back to the Modelview
-	glMatrixMode(GL_MODELVIEW);
+    // Get Back to the Modelview
+    glMatrixMode(GL_MODELVIEW);
     glLoadIdentity();
     
     // Set up the camera
