@@ -13,7 +13,7 @@
 #include "Decimate.h"
 #include "Array3D.h"
 
-static inline void drawVert(const Isosurface& surface, const point& p1, const point& p2, float isolevel)
+static inline void drawVert(const Isosurface& surface, const Point3D& p1, const Point3D& p2, float isolevel)
 {
     
     float v1 = p1.value;
@@ -51,13 +51,13 @@ static inline void drawVert(const Isosurface& surface, const point& p1, const po
         z = p1.z * oneMinusInterp + p2.z * interp;
     }
     
-    vector normal = surface.gradientAt(x, y, z);
+    Vector3D normal = surface.gradientAt(x, y, z);
         
     glNormal3f(normal.x, normal.y, normal.z);
     glVertex3f(x, y, z);
 }
 
-static void drawTetrahedron(const Isosurface& surface, const point p[4], float isolevel)
+static void drawTetrahedron(const Isosurface& surface, const Point3D p[4], float isolevel)
 {
     
     /*
@@ -289,7 +289,7 @@ void decimate(const Isosurface& surface,
                  
                  */
                 
-                const point v[8] = {
+                const Point3D v[8] = {
                     {x1, y1, z1, grid.get(i,     j,     k    )},
                     {x2, y1, z1, grid.get(i + 1, j,     k    )},
                     {x2, y2, z1, grid.get(i + 1, j + 1, k    )},
@@ -300,7 +300,7 @@ void decimate(const Isosurface& surface,
                     {x1, y2, z2, grid.get(i,     j + 1, k + 1)}
                 };
                 
-                const point tetrahedra[6][4] = {
+                const Point3D tetrahedra[6][4] = {
                     { v[0], v[7], v[3], v[2] },
                     { v[0], v[7], v[2], v[6] },
                     { v[0], v[4], v[7], v[6] },

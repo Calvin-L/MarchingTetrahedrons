@@ -9,7 +9,7 @@
 #include <cmath>
 #include <cassert>
 
-void normalize(vector& v)
+void normalize(Vector3D& v)
 {
     float l = sqrtf(v.x*v.x + v.y*v.y + v.z*v.z);
     assert(l > 0);

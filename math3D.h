@@ -8,14 +8,14 @@
 #ifndef MATH3D_H
 #define MATH3D_H
 
-struct point {
+struct Point3D {
     float x, y, z, value;
 };
 
-struct vector {
+struct Vector3D {
     float x, y, z;
 };
 
-void normalize(vector& v);
+void normalize(Vector3D& v);
 
 #endif
