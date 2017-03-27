@@ -12,10 +12,10 @@
 
 class Isosurface
 {
-    
+
 public:
     virtual float valueAt(float x, float y, float z) const = 0;
-    
+
     // returns a normalized vector
     virtual Vector3D gradientAt(float x, float y, float z) const;
 

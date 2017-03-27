@@ -13,17 +13,17 @@
 template <class T>
 class Array3D
 {
-    
+
 private:
     size_t _xmult, _ymult;
     T* _data;
-    
+
 public:
     Array3D(size_t width, size_t height, size_t depth);
     ~Array3D();
     inline void set(size_t x, size_t y, size_t z, const T& value);
     inline const T& get(size_t x, size_t y, size_t z);
-    
+
 };
 
 // ========================================================================

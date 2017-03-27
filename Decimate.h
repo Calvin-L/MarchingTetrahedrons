@@ -13,10 +13,10 @@
 
 //
 // decimate
-// 
+//
 // Draws a bunch of GL_TRIANGLES (with correct normals and vertex order)
 // in order to render the given surface at the given isolevel.
-// 
+//
 
 void decimate(const Isosurface& surface,
               float xMin, float xMax,
