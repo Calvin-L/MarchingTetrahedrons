@@ -45,21 +45,4 @@
 #define GLUT_INCLUDE <GL/glut.h>
 #endif
 
-/************************************************************************/
-
-/*
- * Define a Sleep function that sleeps for the specified number of
- * milliseconds.
- */
-#ifdef OS_WINDOWS
-#define WIN32_LEAN_AND_MEAN // don't include lots of useless crap
-#include <windows.h>
-#else
-#include <unistd.h>
-static inline void Sleep(int ms)
-{
-  usleep(ms*1000);
-}
-#endif
-
 #endif
