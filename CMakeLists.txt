@@ -16,7 +16,7 @@ add_executable(MarchingTetrahedrons
     math3D.h
     math3D.cpp)
 
-find_package(OpenGL)
-find_package(GLUT)
+find_package(OpenGL REQUIRED)
+find_package(GLUT REQUIRED)
 include_directories(${OPENGL_INCLUDE_DIRS} ${GLUT_INCLUDE_DIRS})
 target_link_libraries(MarchingTetrahedrons ${OPENGL_LIBRARIES} ${GLUT_LIBRARY})
