@@ -29,7 +29,7 @@ static float rotY;
 
 static struct { int x, y; } mouse = { -1, -1 };
 
-GLuint list;
+static GLuint list;
 
 void render()
 {
