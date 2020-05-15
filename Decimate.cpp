@@ -59,8 +59,8 @@ static void drawTetrahedron(const Isosurface& surface, const Point3D p[4], float
 
            0
            *
-          /|
-         / |
+          /|\
+         / | \
       3 *-----* 1
          \ | /
           \|/
