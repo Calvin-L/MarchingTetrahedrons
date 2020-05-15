@@ -1,7 +1,7 @@
 #ifndef DECIMATOR_H
 #define DECIMATOR_H
 
-#include <cstdlib>
+#include <cstddef> // std::size_t
 #include "Isosurface.h"
 
 //
@@ -16,6 +16,6 @@ void decimate(const Isosurface& surface,
               float yMin, float yMax,
               float zMin, float zMax,
               float isolevel,
-              size_t resolution);
+              std::size_t resolution);
 
 #endif

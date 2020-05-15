@@ -1,5 +1,5 @@
 #include <iostream>
-#include <cstdlib>
+#include <cstddef> // std::size_t
 #include <cassert>
 
 #include "common.h"
@@ -15,7 +15,7 @@ GLuint preDecimate(const Isosurface& surface,
                    float yMin, float yMax,
                    float zMin, float zMax,
                    float isolevel,
-                   size_t resolution)
+                   std::size_t resolution)
 {
     GLuint list = glGenLists(1);
     glNewList(list, GL_COMPILE);

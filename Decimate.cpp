@@ -214,10 +214,10 @@ void decimate(const Isosurface& surface,
               float yMin, float yMax,
               float zMin, float zMax,
               float isolevel,
-              size_t resolution) // resolution indicates # of cubes
+              std::size_t resolution) // resolution indicates # of cubes
 {
 
-    size_t pointRes = resolution + 1; // indicates the # of points per side
+    std::size_t pointRes = resolution + 1; // indicates the # of points per side
 
     float xrange = xMax - xMin;
     float yrange = yMax - yMin;
@@ -225,11 +225,11 @@ void decimate(const Isosurface& surface,
 
     Array3D<float> grid(pointRes, pointRes, pointRes);
 
-    for (size_t i = 0; i <= resolution; ++i) {
+    for (std::size_t i = 0; i <= resolution; ++i) {
         float x = (float)i/resolution * xrange + xMin;
-        for (size_t j = 0; j <= resolution; ++j) {
+        for (std::size_t j = 0; j <= resolution; ++j) {
             float y = (float)j/resolution * yrange + yMin;
-            for (size_t k = 0; k <= resolution; ++k) {
+            for (std::size_t k = 0; k <= resolution; ++k) {
                 float z = (float)k/resolution * zrange + zMin;
                 float value = surface.valueAt(x, y, z);
                 grid.set(i, j, k, value);
@@ -239,13 +239,13 @@ void decimate(const Isosurface& surface,
 
 
     glBegin(GL_TRIANGLES);
-    for (size_t i = 0; i < resolution; ++i) {
+    for (std::size_t i = 0; i < resolution; ++i) {
         float x1 = (float)i/resolution * xrange + xMin;
         float x2 = (float)(i+1)/resolution * xrange + xMin;
-        for (size_t j = 0; j < resolution; ++j) {
+        for (std::size_t j = 0; j < resolution; ++j) {
             float y1 = (float)j/resolution * yrange + yMin;
             float y2 = (float)(j+1)/resolution * yrange + yMin;
-            for (size_t k = 0; k < resolution; ++k) {
+            for (std::size_t k = 0; k < resolution; ++k) {
                 float z1 = (float)k/resolution * zrange + zMin;
                 float z2 = (float)(k+1)/resolution * zrange + zMin;
 
