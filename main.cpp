@@ -129,9 +129,6 @@ void init()
 
 int main (int argc, char * argv[])
 {
-
-    assert(sizeof(char) == 1);
-
     glutInit(&argc, argv);
     glutInitDisplayMode(GLUT_DOUBLE | GLUT_DEPTH | GLUT_RGBA);
 
