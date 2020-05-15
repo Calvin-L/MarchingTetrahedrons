@@ -14,16 +14,23 @@ private:
     T* _data;
 
 public:
+    Array3D();
     Array3D(std::size_t width, std::size_t height, std::size_t depth);
     Array3D(const Array3D& other);
     Array3D& operator=(Array3D other);
     ~Array3D();
-    inline void set(std::size_t x, std::size_t y, std::size_t z, const T& value);
-    inline const T& get(std::size_t x, std::size_t y, std::size_t z);
+    inline       T& operator()(std::size_t x, std::size_t y, std::size_t z);
+    inline const T& operator()(std::size_t x, std::size_t y, std::size_t z) const;
 
 };
 
 // ========================================================================
+
+template <class T>
+Array3D<T>::Array3D()
+:_xmult(0), _ymult(0), _total(0), _data(NULL)
+{
+}
 
 template <class T>
 Array3D<T>::Array3D(std::size_t width, std::size_t height, std::size_t depth)
@@ -51,18 +58,20 @@ Array3D<T>& Array3D<T>::operator=(Array3D other)
 template <class T>
 Array3D<T>::~Array3D()
 {
-    delete[] _data;
+    if (_data != NULL) {
+        delete[] _data;
+    }
 }
 
 template <class T>
-void Array3D<T>::set(std::size_t x, std::size_t y, std::size_t z, const T& value)
+T& Array3D<T>::operator()(std::size_t x, std::size_t y, std::size_t z)
 {
     assert(x * _xmult + y * _ymult + z < _total);
-    _data[x * _xmult + y * _ymult + z] = value;
+    return _data[x * _xmult + y * _ymult + z];
 }
 
 template <class T>
-const T& Array3D<T>::get(std::size_t x, std::size_t y, std::size_t z)
+const T& Array3D<T>::operator()(std::size_t x, std::size_t y, std::size_t z) const
 {
     assert(x * _xmult + y * _ymult + z < _total);
     return _data[x * _xmult + y * _ymult + z];

@@ -232,7 +232,7 @@ void decimate(const Isosurface& surface,
             for (std::size_t k = 0; k <= resolution; ++k) {
                 float z = (float)k/resolution * zrange + zMin;
                 float value = surface.valueAt(x, y, z);
-                grid.set(i, j, k, value);
+                grid(i, j, k) = value;
             }
         }
     }
@@ -283,14 +283,14 @@ void decimate(const Isosurface& surface,
                  */
 
                 const Point3D v[8] = {
-                    {x1, y1, z1, grid.get(i,     j,     k    )},
-                    {x2, y1, z1, grid.get(i + 1, j,     k    )},
-                    {x2, y2, z1, grid.get(i + 1, j + 1, k    )},
-                    {x1, y2, z1, grid.get(i,     j + 1, k    )},
-                    {x1, y1, z2, grid.get(i,     j,     k + 1)},
-                    {x2, y1, z2, grid.get(i + 1, j,     k + 1)},
-                    {x2, y2, z2, grid.get(i + 1, j + 1, k + 1)},
-                    {x1, y2, z2, grid.get(i,     j + 1, k + 1)}
+                    {x1, y1, z1, grid(i,     j,     k    )},
+                    {x2, y1, z1, grid(i + 1, j,     k    )},
+                    {x2, y2, z1, grid(i + 1, j + 1, k    )},
+                    {x1, y2, z1, grid(i,     j + 1, k    )},
+                    {x1, y1, z2, grid(i,     j,     k + 1)},
+                    {x2, y1, z2, grid(i + 1, j,     k + 1)},
+                    {x2, y2, z2, grid(i + 1, j + 1, k + 1)},
+                    {x1, y2, z2, grid(i,     j + 1, k + 1)}
                 };
 
                 const Point3D tetrahedra[6][4] = {
