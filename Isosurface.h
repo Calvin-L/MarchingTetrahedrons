@@ -12,6 +12,8 @@ public:
     // returns a normalized vector
     virtual Vector3D gradientAt(float x, float y, float z) const;
 
+    virtual ~Isosurface();
+
 };
 
 #endif

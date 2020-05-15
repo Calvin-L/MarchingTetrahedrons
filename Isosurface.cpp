@@ -12,3 +12,6 @@ Vector3D Isosurface::gradientAt(float x, float y, float z) const
     normalize(result);
     return result;
 }
+
+Isosurface::~Isosurface() {
+}
