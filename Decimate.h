@@ -1,10 +1,3 @@
-//
-//  Decimate.h
-//  MarchingCubes
-//
-//  Created by Calvin Loncaric on 6/26/11.
-//
-
 #ifndef DECIMATOR_H
 #define DECIMATOR_H
 

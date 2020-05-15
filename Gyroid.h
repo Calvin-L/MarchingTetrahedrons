@@ -1,10 +1,3 @@
-//
-//  Gyroid.h
-//  VolumeRenderer
-//
-//  Created by Calvin Loncaric on 6/26/11.
-//
-
 #ifndef GYROID_H
 #define GYROID_H
 

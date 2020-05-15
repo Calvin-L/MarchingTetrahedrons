@@ -1,10 +1,3 @@
-//
-//  Isosurface.cpp
-//  VolumeRenderer
-//
-//  Created by Calvin Loncaric on 4/11/12.
-//
-
 #include "Isosurface.h"
 
 Vector3D Isosurface::gradientAt(float x, float y, float z) const

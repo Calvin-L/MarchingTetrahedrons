@@ -1,10 +1,3 @@
-//
-//  Sphere.cpp
-//  MarchingCubes
-//
-//  Created by Calvin Loncaric on 6/26/11.
-//
-
 #include "Sphere.h"
 #include <cmath>
 

@@ -1,10 +1,3 @@
-//
-//  math3D.cpp
-//  VolumeRenderer
-//
-//  Created by Calvin Loncaric on 6/26/11.
-//
-
 #include "math3D.h"
 #include <cmath>
 #include <cassert>

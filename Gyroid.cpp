@@ -1,10 +1,3 @@
-//
-//  Gyroid.cpp
-//  VolumeRenderer
-//
-//  Created by Calvin Loncaric on 6/26/11.
-//
-
 #include "Gyroid.h"
 #include <cmath>
 

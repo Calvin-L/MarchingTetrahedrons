@@ -1,10 +1,3 @@
-//
-//  Sphere.h
-//  MarchingCubes
-//
-//  Created by Calvin Loncaric on 6/26/11.
-//
-
 #ifndef SPHERE_H
 #define SPHERE_H
 

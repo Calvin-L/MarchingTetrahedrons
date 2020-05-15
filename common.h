@@ -1,10 +1,3 @@
-//
-//  common.h
-//  MarchingCubes
-//
-//  Created by Calvin Loncaric on 6/26/11.
-//
-
 #ifndef COMMON_H
 #define COMMON_H
 

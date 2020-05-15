@@ -1,10 +1,3 @@
-//
-//  Array3D.h
-//  MarchingCubes
-//
-//  Created by Calvin Loncaric on 6/26/11.
-//
-
 #ifndef ARRAY3D_H
 #define ARRAY3D_H
 

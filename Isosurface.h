@@ -1,10 +1,3 @@
-//
-//  Isosurface.h
-//  MarchingCubes
-//
-//  Created by Calvin Loncaric on 6/26/11.
-//
-
 #ifndef ISOSURFACE_H
 #define ISOSURFACE_H
 

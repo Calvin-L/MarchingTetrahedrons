@@ -1,10 +1,3 @@
-//
-//  main.cpp
-//  MarchingCubes
-//
-//  Created by Calvin Loncaric on 6/25/11.
-//
-
 #include <iostream>
 #include <cstdlib>
 #include <cassert>
