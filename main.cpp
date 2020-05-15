@@ -1,6 +1,4 @@
-#include <iostream>
 #include <cstddef> // std::size_t
-#include <cassert>
 
 #include "common.h"
 #include GLUT_INCLUDE

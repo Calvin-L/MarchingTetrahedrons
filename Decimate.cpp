@@ -1,6 +1,4 @@
 #include <cassert>
-#include <iostream>
-#include <cmath>
 #include "common.h"
 #include GLUT_INCLUDE
 #include "Decimate.h"
