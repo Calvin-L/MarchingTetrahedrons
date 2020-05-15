@@ -38,4 +38,9 @@
 #define GLUT_INCLUDE <GL/glut.h>
 #endif
 
+/*
+ * Silence angry deprecation warnings on some platforms
+ */
+#define GL_SILENCE_DEPRECATION 1
+
 #endif
