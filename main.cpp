@@ -27,7 +27,8 @@ GLuint preDecimate(const Isosurface& surface,
 static float rotX;
 static float rotY;
 
-static struct { int x, y; } mouse = { -1, -1 };
+static bool mouseInitialized = false;
+static struct { int x, y; } mouse;
 
 static GLuint list;
 
@@ -93,22 +94,24 @@ void mouseDown(int button, int state, int x, int y)
 {
     mouse.x = x;
     mouse.y = y;
+    mouseInitialized = true;
 }
 
 void mouseDragged(int x, int y)
 {
+    if (mouseInitialized) {
+        float dx = x - mouse.x;
+        float dy = y - mouse.y;
 
-    float dx = x - mouse.x;
-    float dy = y - mouse.y;
-
-    rotX += dx / 10;
-    rotY -= dy / 10;
+        rotX += dx / 10;
+        rotY -= dy / 10;
+    }
 
     mouse.x = x;
     mouse.y = y;
+    mouseInitialized = true;
 
     glutPostRedisplay();
-
 }
 
 void init()
