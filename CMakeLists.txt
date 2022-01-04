@@ -1,4 +1,4 @@
-cmake_minimum_required(VERSION 3.0)
+cmake_minimum_required(VERSION 3.8)
 project(MarchingTetrahedrons)
 
 add_executable(MarchingTetrahedrons
@@ -18,5 +18,7 @@ add_executable(MarchingTetrahedrons
 
 find_package(OpenGL REQUIRED)
 find_package(GLUT REQUIRED)
-include_directories(${OPENGL_INCLUDE_DIRS} ${GLUT_INCLUDE_DIRS})
-target_link_libraries(MarchingTetrahedrons ${OPENGL_LIBRARIES} ${GLUT_LIBRARY})
+
+target_link_libraries(MarchingTetrahedrons PRIVATE
+    OpenGL::GL
+    GLUT::GLUT)
