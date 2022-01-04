@@ -3,7 +3,7 @@
 
 float Sphere::valueAt(float x, float y, float z) const
 {
-    return sqrtf(x*x + y*y + z*z);
+    return std::sqrt(x*x + y*y + z*z);
 }
 
 Vector3D Sphere::gradientAt(float x, float y, float z) const

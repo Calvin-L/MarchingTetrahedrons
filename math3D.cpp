@@ -4,7 +4,7 @@
 
 void normalize(Vector3D& v)
 {
-    float l = sqrtf(v.x*v.x + v.y*v.y + v.z*v.z);
+    float l = std::sqrt(v.x*v.x + v.y*v.y + v.z*v.z);
     assert(l > 0);
     v.x /= l;
     v.y /= l;

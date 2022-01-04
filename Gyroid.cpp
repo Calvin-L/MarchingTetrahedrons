@@ -3,14 +3,14 @@
 
 float Gyroid::valueAt(float x, float y, float z) const
 {
-    return (cosf(x) * sinf(y) + cosf(y) * sinf(z) + cosf(z) * sinf(x));
+    return (std::cos(x) * std::sin(y) + std::cos(y) * std::sin(z) + std::cos(z) * std::sin(x));
 }
 
 Vector3D Gyroid::gradientAt(float x, float y, float z) const
 {
-    float gx = cosf(x) * cosf(z) - sinf(x) * sinf(y);
-    float gy = cosf(x) * cosf(y) - sinf(y) * sinf(z);
-    float gz = cosf(y) * cosf(z) - sinf(x) * sinf(z);
+    float gx = std::cos(x) * std::cos(z) - std::sin(x) * std::sin(y);
+    float gy = std::cos(x) * std::cos(y) - std::sin(y) * std::sin(z);
+    float gz = std::cos(y) * std::cos(z) - std::sin(x) * std::sin(z);
 
     Vector3D result = { gx, gy, gz };
     normalize(result);
