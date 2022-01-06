@@ -66,11 +66,18 @@ static void drawTetrahedron(const Isosurface& surface, const Point3D p[4], float
            2
      */
 
+    // Tricky little trick here: compute a single number that tells us which
+    // vertices are inside or outside.  The bit for `2^i` will be 1 iff `p[i]`
+    // is inside the surface.
     unsigned char index = 0;
-    for (int i = 0; i < 4; ++i)
-        if (p[i].value < isolevel)
+    for (int i = 0; i < 4; ++i) {
+        if (p[i].value < isolevel) {
             index |= (1 << i);
+        }
+    }
 
+    // Case analysis: draw appropriate triangles based on which vertices are
+    // inside the shape.
     switch (index) {
 
         // we don't do anything if everyone is inside or outside
@@ -220,6 +227,26 @@ void decimate(const Isosurface& surface,
     float xrange = xMax - xMin;
     float yrange = yMax - yMin;
     float zrange = zMax - zMin;
+
+    // CPU/memory tradeoff ahead: to avoid recomputation, this implementation
+    // fills a giant 3D array with the suface values at each vertex of the
+    // grid, then queries that array in the triangle-drawing loop.
+    //
+    // If you know that your surface is very fast to query, then this is mostly
+    // a waste of memory.
+    //
+    // If you are willing to optimize further, you could avoid avoid
+    // recomputation with drastically less memory by walking through "slices"
+    // of the grid along, say, the x-coordinate:
+    //
+    //       /     +-----+
+    //    x /     +-----+|
+    //     /     +-----+||
+    //                 ||+
+    //            ...  |+
+    //                 +
+    //
+    // Only two slices at a time would be necessary.
 
     Array3D<float> grid(pointRes, pointRes, pointRes);
 
