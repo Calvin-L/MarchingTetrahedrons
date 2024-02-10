@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.8)
 project(MarchingTetrahedrons)
 
+set(OpenGL_GL_PREFERENCE GLVND)
+
 add_executable(MarchingTetrahedrons
     common.h
     Array3D.h
@@ -19,6 +21,16 @@ add_executable(MarchingTetrahedrons
 find_package(OpenGL REQUIRED)
 find_package(GLUT REQUIRED)
 
+target_include_directories(MarchingTetrahedrons PRIVATE ${OPENGL_INCLUDE_DIRS} ${GLUT_INCLUDE_DIRS})
+
 target_link_libraries(MarchingTetrahedrons PRIVATE
     OpenGL::GL
     GLUT::GLUT)
+
+if(UNIX AND NOT APPLE)
+    target_link_libraries(MarchingTetrahedrons PRIVATE GLU)
+endif()
+
+if(WIN32)
+    target_link_libraries(MarchingTetrahedrons PRIVATE glu32)
+endif()
