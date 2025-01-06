@@ -1,6 +1,6 @@
 #include <cassert>
 #include "common.h"
-#include GLUT_INCLUDE
+#include "glutwrapper.h"
 #include "Decimate.h"
 #include "Array3D.h"
 

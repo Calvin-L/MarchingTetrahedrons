@@ -1,7 +1,7 @@
 #include <cstddef> // std::size_t
 
 #include "common.h"
-#include GLUT_INCLUDE
+#include "glutwrapper.h"
 
 #include "Gyroid.h"
 #include "Sphere.h"

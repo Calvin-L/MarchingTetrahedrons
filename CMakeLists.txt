@@ -3,6 +3,7 @@ project(MarchingTetrahedrons)
 
 add_executable(MarchingTetrahedrons
     common.h
+    ${CMAKE_CURRENT_BINARY_DIR}/glutwrapper.h
     Array3D.h
     Decimate.h
     Decimate.cpp
@@ -18,6 +19,12 @@ add_executable(MarchingTetrahedrons
 
 find_package(OpenGL REQUIRED)
 find_package(GLUT REQUIRED)
+
+# Generate glutwrapper.h -- see comments in glutwrapper.h.in
+find_path(GLUT_INCLUDE_DIR NAMES glut.h PATHS ${GLUT_INCLUDE_DIRS})
+message(VERBOSE "Using glut.h from ${GLUT_INCLUDE_DIR}")
+configure_file(glutwrapper.h.in glutwrapper.h @ONLY)
+target_include_directories(MarchingTetrahedrons PRIVATE "${CMAKE_CURRENT_BINARY_DIR}")
 
 target_link_libraries(MarchingTetrahedrons PRIVATE
     OpenGL::GL

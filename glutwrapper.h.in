@@ -1,0 +1,9 @@
+// The exact GLUT include differs by platform: on MacOS it is <GLUT/glut.h>,
+// while on Windows and Linux it is <GL/glut.h>.  CMake, which knows the
+// correct value for GLUT_INCLUDE_DIR, uses this template to produce a generic
+// include header that directs to the right one, whichever it is.
+//
+// Because we're just including another header, we don't even need the typical
+// #ifndef guard.
+
+#include <@GLUT_INCLUDE_DIR@/glut.h>
